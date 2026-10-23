@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "live-caption"
+version = "0.1.0"
+description = "Calm, transparent, real-time caption overlay for any audio playing on your PC."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["soundcard", "numpy", "vosk"]
+
+[project.scripts]
+live-caption = "live_caption.app:main"
+
+[tool.setuptools.packages.find]
+include = ["live_caption*"]
